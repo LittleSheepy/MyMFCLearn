@@ -1,26 +1,26 @@
 #pragma once
-MFCµÄÎÄµµ½á¹¹  -MFC³ÌĞòDoc  £ºÊÇÒ»¸öÀà£¬ÓÃÀ´´æ´¢Êı¾İ
-MFCµÄÊÓÍ¼½á¹¹  -MFC³ÌĞòView £ºÊÇÒ»¸öÀà£¬ÓÃÀ´ÏÔÊ¾ºÍĞŞ¸ÄÊı¾İ
-MFCµÄ¿ò¼ÜÀà    -£ºÒ»¸öÈİÆ÷£¬Õâ¸öÈİÆ÷×°ÁËÊÓÍ¼
-MFCµÄÏîÄ¿¹¤³ÌÀà-MFC³ÌĞò     £ºÊÇÕû¸öÏîÄ¿Èë¿Ú
+MFCçš„æ–‡æ¡£ç»“æ„  -MFCç¨‹åºDoc  ï¼šæ˜¯ä¸€ä¸ªç±»ï¼Œç”¨æ¥å­˜å‚¨æ•°æ®
+MFCçš„è§†å›¾ç»“æ„  -MFCç¨‹åºView ï¼šæ˜¯ä¸€ä¸ªç±»ï¼Œç”¨æ¥æ˜¾ç¤ºå’Œä¿®æ”¹æ•°æ®
+MFCçš„æ¡†æ¶ç±»    -ï¼šä¸€ä¸ªå®¹å™¨ï¼Œè¿™ä¸ªå®¹å™¨è£…äº†è§†å›¾
+MFCçš„é¡¹ç›®å·¥ç¨‹ç±»-MFCç¨‹åº     ï¼šæ˜¯æ•´ä¸ªé¡¹ç›®å…¥å£
 
-class CP3MFC³ÌĞòApp : public CWinApp
-³ÌĞòÈë¿Ú£¬ÆäInitInstance()º¯ÊıÒ²ÓĞ»æÖÆ×î³õ´°¿ÚµÄ·½·¨
+class CP3MFCç¨‹åºApp : public CWinApp
+ç¨‹åºå…¥å£ï¼Œå…¶InitInstance()å‡½æ•°ä¹Ÿæœ‰ç»˜åˆ¶æœ€åˆçª—å£çš„æ–¹æ³•
 m_pMainWnd->ShowWindow(SW_SHOW);
 m_pMainWnd->UpdateWindow();
 
 class CMainFrame : public CFrameWnd
-ÓĞº¯Êı
+æœ‰å‡½æ•°
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-WinAPIÊÇÍ¨¹ıCreateWindow()´´½¨£¬¶øPreCreateWindowÔòÊÇÔÚCreateWindowÖ®Ç°ÏÈµ÷ÓÃ¡£
-µ±CreateWindowµ÷ÓÃÍê³Éºó£¬²úÉúWM_CREATEĞÅºÅ£¬×îÖÕµ÷ÓÃOnCreate¡£
+WinAPIæ˜¯é€šè¿‡CreateWindow()åˆ›å»ºï¼Œè€ŒPreCreateWindowåˆ™æ˜¯åœ¨CreateWindowä¹‹å‰å…ˆè°ƒç”¨ã€‚
+å½“CreateWindowè°ƒç”¨å®Œæˆåï¼Œäº§ç”ŸWM_CREATEä¿¡å·ï¼Œæœ€ç»ˆè°ƒç”¨OnCreateã€‚
 
-class CP3MFC³ÌĞòView : public CView
-ÓĞº¯Êı
-virtual void OnDraw(CDC* pDC);  // ÖØĞ´ÒÔ»æÖÆ¸ÃÊÓÍ¼
-ÔÚviewÖĞ£¬¿ÉÒÔÕÒµ½OnDraw(CDC*pdc)º¯Êı¡£µ±OnDrawÓëOnPaintÍ¬Ê±´æÔÚÊ±£¬Ö»ÓĞOnPaintÓĞĞ§¡£
-OnPaintÊÇWM_PAINTµÄÏûÏ¢´¦Àíº¯Êı£¬×îÖÕËü»áÖ´ĞĞOnDraw¡£
+class CP3MFCç¨‹åºView : public CView
+æœ‰å‡½æ•°
+virtual void OnDraw(CDC* pDC);  // é‡å†™ä»¥ç»˜åˆ¶è¯¥è§†å›¾
+åœ¨viewä¸­ï¼Œå¯ä»¥æ‰¾åˆ°OnDraw(CDC*pdc)å‡½æ•°ã€‚å½“OnDrawä¸OnPaintåŒæ—¶å­˜åœ¨æ—¶ï¼Œåªæœ‰OnPaintæœ‰æ•ˆã€‚
+OnPaintæ˜¯WM_PAINTçš„æ¶ˆæ¯å¤„ç†å‡½æ•°ï¼Œæœ€ç»ˆå®ƒä¼šæ‰§è¡ŒOnDrawã€‚
 
 
 
