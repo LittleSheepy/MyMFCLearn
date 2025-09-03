@@ -1,0 +1,36 @@
+#pragma once
+MFC的文档结构  -MFC程序Doc  ：是一个类，用来存储数据
+MFC的视图结构  -MFC程序View ：是一个类，用来显示和修改数据
+MFC的框架类    -：一个容器，这个容器装了视图
+MFC的项目工程类-MFC程序     ：是整个项目入口
+
+class CP3MFC程序App : public CWinApp
+程序入口，其InitInstance()函数也有绘制最初窗口的方法
+m_pMainWnd->ShowWindow(SW_SHOW);
+m_pMainWnd->UpdateWindow();
+
+class CMainFrame : public CFrameWnd
+有函数
+afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+WinAPI是通过CreateWindow()创建，而PreCreateWindow则是在CreateWindow之前先调用。
+当CreateWindow调用完成后，产生WM_CREATE信号，最终调用OnCreate。
+
+class CP3MFC程序View : public CView
+有函数
+virtual void OnDraw(CDC* pDC);  // 重写以绘制该视图
+在view中，可以找到OnDraw(CDC*pdc)函数。当OnDraw与OnPaint同时存在时，只有OnPaint有效。
+OnPaint是WM_PAINT的消息处理函数，最终它会执行OnDraw。
+
+
+
+
+
+
+
+
+
+
+
+
+

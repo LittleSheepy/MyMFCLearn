@@ -15,16 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyMFCLearn.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MyMFCLearnDlg.h">
+    <ClInclude Include="P3MFC程序.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="P3MFC程序Doc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="P3MFC程序View.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -35,10 +41,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyMFCLearn.cpp">
+    <ClCompile Include="P3MFC程序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MyMFCLearnDlg.cpp">
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P3MFC程序Doc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P3MFC程序View.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -46,18 +58,35 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MyMFCLearn.rc">
+    <ResourceCompile Include="P3MFC.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MyMFCLearn.rc2">
+    <None Include="res\P3MFC.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\MyMFCLearn.ico">
+    <Image Include="res\P3MFC程序Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\P3MFC程序.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="说明.txt">
+      <Filter>源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>
