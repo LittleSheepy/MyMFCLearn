@@ -26,6 +26,7 @@ BEGIN_MESSAGE_MAP(CP3MFC程序App, CWinApp)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 	// 标准打印设置命令
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
+    ON_COMMAND(ID_FILE_SAVE, &CP3MFC程序App::OnFileSave)
 END_MESSAGE_MAP()
 
 
@@ -182,3 +183,10 @@ void CP3MFC程序App::OnAppAbout()
 
 
 
+
+
+void CP3MFC程序App::OnFileSave()
+{
+    // TODO: 在此添加命令处理程序代码
+    AfxMessageBox(TEXT("App"));
+}

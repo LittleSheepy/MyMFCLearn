@@ -33,6 +33,11 @@ BEGIN_MESSAGE_MAP(CP3MFC程序View, CView)
     ON_WM_CREATE()
     ON_WM_CHAR()
     ON_WM_TIMER()
+    //ON_COMMAND(ID_FILE_SAVE, &CP3MFC程序View::OnFileSave)
+    //ON_COMMAND(ID_TEST_DEMO, &CP3MFC程序View::OnTestDemo)
+    ON_WM_RBUTTONDOWN()
+    ON_COMMAND(ID_TEST_B, &CP3MFC程序View::OnTestB)
+    ON_UPDATE_COMMAND_UI(ID_TEST_A, &CP3MFC程序View::OnUpdateTestA)
 END_MESSAGE_MAP()
 
 // CP3MFC程序View 构造/析构
@@ -40,6 +45,7 @@ END_MESSAGE_MAP()
 CP3MFC程序View::CP3MFC程序View() noexcept
 {
 	// TODO: 在此处添加构造代码
+    m_isUpdate = false;
 
 }
 
@@ -269,3 +275,57 @@ void CP3MFC程序View::OnTimer(UINT_PTR nIDEvent)
     dc.DrawText(str, &rect, DT_LEFT);
     CView::OnTimer(nIDEvent);
 }
+
+void CP3MFC程序View::OnFileSave()
+{
+    // TODO: 在此添加命令处理程序代码
+    AfxMessageBox(TEXT("View"));
+}
+
+
+void CP3MFC程序View::OnTestDemo()
+{
+    // TODO: 在此添加命令处理程序代码
+    AfxMessageBox(TEXT("View Demo"));
+}
+
+
+void CP3MFC程序View::OnRButtonDown(UINT nFlags, CPoint point)//鼠标标志以及点击的坐标
+{	
+    //由于菜单是属于框架的，因而要单独为view创建一个
+    CMenu menu;
+    //载入需要的菜单
+    menu.LoadMenuW(IDR_MENU1);
+    CMenu* subMenu = menu.GetSubMenu(0);
+    if (true == m_isUpdate) {
+        subMenu->EnableMenuItem(subMenu->GetMenuItemID(0), TRUE);
+    }
+    else {
+        subMenu->EnableMenuItem(subMenu->GetMenuItemID(0), FALSE);
+    }
+    //将客户区域坐标转换为屏幕坐标（左上角原点）。因为弹窗坐标是以屏幕为单位
+    ClientToScreen(&point);
+    //标志位(设置鼠标在弹出菜单的位置，通过屏幕位置标志与鼠标键标志组合)，
+    //坐标x，坐标 y，属于哪一个窗口，对齐方式(TRUE，则菜单按从右到左的阅读顺序右对齐;FALSE，则菜单为从左到右的阅读顺序左对齐)
+    //此处为鼠标在左侧，右键点击,去点击坐标，当前窗口，默认值FALSE
+    subMenu->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, this);
+    CView::OnRButtonDown(nFlags, point);
+}
+
+
+void CP3MFC程序View::OnUpdateTestA(CCmdUI* pCmdUI)
+{
+    if (true == m_isUpdate) {
+        pCmdUI->Enable(TRUE);
+    }
+    else {
+        pCmdUI->Enable(FALSE);
+    }
+
+}
+
+void CP3MFC程序View::OnTestB()
+{
+    m_isUpdate = !m_isUpdate;
+}
+

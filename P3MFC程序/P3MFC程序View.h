@@ -52,6 +52,14 @@ public:
     afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
     afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
     afx_msg void OnTimer(UINT_PTR nIDEvent);
+    afx_msg void OnFileSave();
+    afx_msg void OnTestDemo();
+    afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+    afx_msg void OnTestB();
+private:
+    bool m_isUpdate;
+public:
+    afx_msg void OnUpdateTestA(CCmdUI* pCmdUI);
 };
 
 #ifndef _DEBUG  // P3MFC程序View.cpp 中的调试版本

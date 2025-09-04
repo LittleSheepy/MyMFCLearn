@@ -28,6 +28,7 @@ public:
 // 实现
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
+    afx_msg void OnFileSave();
 };
 
 extern CP3MFC程序App theApp;

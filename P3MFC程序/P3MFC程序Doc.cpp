@@ -23,6 +23,8 @@
 IMPLEMENT_DYNCREATE(CP3MFC程序Doc, CDocument)
 
 BEGIN_MESSAGE_MAP(CP3MFC程序Doc, CDocument)
+    //ON_COMMAND(ID_FILE_SAVE, &CP3MFC程序Doc::OnFileSave)
+    //ON_COMMAND(ID_TEST_DEMO, &CP3MFC程序Doc::OnTestDemo)
 END_MESSAGE_MAP()
 
 
@@ -136,3 +138,17 @@ void CP3MFC程序Doc::Dump(CDumpContext& dc) const
 
 
 // CP3MFC程序Doc 命令
+
+
+void CP3MFC程序Doc::OnFileSave()
+{
+    // TODO: 在此添加命令处理程序代码
+    AfxMessageBox(TEXT("Doc"));
+}
+
+
+void CP3MFC程序Doc::OnTestDemo()
+{
+    // TODO: 在此添加命令处理程序代码
+    AfxMessageBox(TEXT("Doc Demo"));
+}

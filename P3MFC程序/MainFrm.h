@@ -40,6 +40,12 @@ protected:
 
 public:
     afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+    afx_msg void OnFileSave();
+    afx_msg void OnTestDemo();
+    afx_msg void OnUpdateTestA(CCmdUI* pCmdUI);
+    afx_msg void OnTestB();
+private:
+    bool m_isUpdate;
 };
 
 
