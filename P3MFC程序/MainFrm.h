@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "MyDialog.h"
 
 class CMainFrame : public CFrameWnd
 {
@@ -46,6 +47,11 @@ public:
     afx_msg void OnTestB();
 private:
     bool m_isUpdate;
+public:
+	afx_msg void OnTestExec();
+	CDialog dlg;
+	afx_msg void OnTestShow();
+	afx_msg void OnTestMyDlg();
 };
 
 

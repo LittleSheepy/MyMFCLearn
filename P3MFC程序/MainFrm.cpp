@@ -23,6 +23,9 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
     ON_COMMAND(ID_TEST_DEMO, &CMainFrame::OnTestDemo)
     ON_UPDATE_COMMAND_UI(ID_TEST_A, &CMainFrame::OnUpdateTestA)
     ON_COMMAND(ID_TEST_B, &CMainFrame::OnTestB)
+    ON_COMMAND(ID_TEST_EXEC, &CMainFrame::OnTestExec)
+    ON_COMMAND(ID_TEST_SHOW, &CMainFrame::OnTestShow)
+    ON_COMMAND(ID_TEST_MY_DLG, &CMainFrame::OnTestMyDlg)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -40,6 +43,7 @@ CMainFrame::CMainFrame() noexcept
 	// TODO: 在此添加成员初始化代码
     m_bAutoMenuEnable = FALSE;          // 避免它内部自动更新。与构造函数总设置。
     m_isUpdate = false;
+    dlg.Create(IDD_DIALOG2);
 }
 
 CMainFrame::~CMainFrame()
@@ -172,4 +176,29 @@ void CMainFrame::OnUpdateTestA(CCmdUI* pCmdUI)
 void CMainFrame::OnTestB()
 {
     m_isUpdate = !m_isUpdate;
+}
+
+
+void CMainFrame::OnTestExec()
+{
+    // TODO: 在此添加命令处理程序代码
+    // 创建对象
+    //无参构造
+    //有参构造：对话框的ID（UINT）/名称（LPCTSTR)，父对象（CWnd*)默认为NULL
+    CDialog dialog(IDD_DIALOG1);
+    dialog.DoModal();//以模态运行
+}
+
+void CMainFrame::OnTestShow()
+{
+    // TODO: 在此添加命令处理程序代码
+    dlg.ShowWindow(TRUE);
+}
+
+
+void CMainFrame::OnTestMyDlg()
+{
+    // TODO: 在此添加命令处理程序代码
+    MyDialog dlg;
+    dlg.DoModal();
 }

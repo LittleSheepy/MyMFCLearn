@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F5240853-84A3-40DC-AF2F-A5E2B15F1F41}</ProjectGuid>
+    <ProjectGuid>{BA56D010-E028-4E8E-BDE4-487B47B27306}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>P3MFC程序</RootNamespace>
+    <RootNamespace>P4DialogBased</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -184,21 +184,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="MyDialog.h" />
-    <ClInclude Include="P3MFC程序.h" />
-    <ClInclude Include="P3MFC程序Doc.h" />
-    <ClInclude Include="P3MFC程序View.h" />
+    <ClInclude Include="MyButton.h" />
+    <ClInclude Include="P4DialogBased.h" />
+    <ClInclude Include="P4DialogBasedDlg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="MyDialog.cpp" />
-    <ClCompile Include="P3MFC程序.cpp" />
-    <ClCompile Include="P3MFC程序Doc.cpp" />
-    <ClCompile Include="P3MFC程序View.cpp" />
+    <ClCompile Include="MyButton.cpp" />
+    <ClCompile Include="P4DialogBased.cpp" />
+    <ClCompile Include="P4DialogBasedDlg.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -207,20 +203,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="P3MFC.rc" />
+    <ResourceCompile Include="P4DialogBased.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\P3MFC.rc2" />
+    <None Include="res\P4DialogBased.rc2" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\bitmap1.bmp" />
-    <Image Include="res\bitmap2.bmp" />
-    <Image Include="res\P3MFC程序.ico" />
-    <Image Include="res\P3MFC程序Doc.ico" />
-    <Image Include="res\Toolbar.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="说明.txt" />
+    <Image Include="res\P4DialogBased.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
